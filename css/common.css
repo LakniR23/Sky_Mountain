@@ -1,0 +1,177 @@
+.description {
+    margin: 10px 100px;
+    padding: 30px;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Rouge Script", cursive;
+}
+
+.image-description {
+    margin: 10px 100px;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Nanum Myeongjo", serif;
+}
+
+.image-gallery {
+    margin: 30px;
+    padding: 0 20px;
+    max-width: 1200px; /* Increased to accommodate two columns */
+}
+
+/* New grid layout for 4×2 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.image-card {
+    width: 100%;
+    height: 180px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+}
+
+.image-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for image */
+.image-container {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-gallery-title {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-text {
+    position: relative;
+    flex-grow: 1;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Title content that will disappear on hover */
+.title-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+}
+
+.title-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Description that slides in from left */
+.sliding-description {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.sliding-description p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* On hover, slide the description from left to right and hide the title */
+.image-card:hover .sliding-description {
+    left: 0;
+    background-color: rgb(201, 219, 230);
+}
+
+.image-card:hover .title-content {
+    transform: translateX(100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Switch to one column on medium screens */
+    }
+    
+    .description {
+        margin: 10px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .image-container {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .image-text {
+        height: 80px;
+    }
+    
+    .title-content, .sliding-description {
+        padding: 15px;
+    }
+    
+    .description {
+        margin: 10px 20px;
+        font-size: 24px;
+    }
+}
+
+.imageCommon img {
+    width:100%;
+    height: 450px;
+    position: relative;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SkyMountain</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rouge+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+                <a href="index.html"><img src="images/sky-mountain-high-resolution-logo-transparent (1).png" alt="SkyMountain logo" width="auto" height="40px"></a>
+        </div>
+
+        <div class="navigation">
+            <ul type="none">
+              <a href="index.html"><li>Home</li></a>
+              <a href=""><li>Why Sky Mountain?</li></a>
+              <a href="commonProperties.html"><li>Listed Properties</li></a>
+              <a href=""><li>List your property</li></a>
+              <a href="contact.html"><li>Contact us</li></a>
+            </ul>
+        </div>
+
+        <div class="profile">
+            <i class="fa-solid fa-user fa-2x"></i>
+        </div>
+    </div>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const hamburger = document.querySelector('.hamburger-menu');
+          const nav = document.querySelector('.navigation');
+          
+          hamburger.addEventListener('click', function() {
+              hamburger.classList.toggle('active');
+              nav.classList.toggle('active');
+          });
+      });
+      </script>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <div class="carousel-item">
+          <img class="carousel-image active" src="images/4.jpg" alt="Property 1">
+          <div class="carousel-text">Where comfort meets style - Browse our houses.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/2.jpg" alt="Property 2">
+          <div class="carousel-text">Discover the future of living with our new developments.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/11.jpg" alt="Property 3">
+          <div class="carousel-text">Secure your piece of land today.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/1.jpg" alt="Property 4">
+          <div class="carousel-text">Experience modern living in our apartments.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/9.jpg" alt="Property 5">
+          <div class="carousel-text">Comfort, luxury, and convenience - Stay with us.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/6.jpg" alt="Property 6">
+          <div class="carousel-text">Own your own plantation - A world of opportunities.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/7.jpg" alt="Property 7">
+          <div class="carousel-text">Build your business on our commercial land.</div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-image" src="images/10.jpg" alt="Property 8">
+          <div class="carousel-text">Find your ideal factory space today.</div>
+        </div>
+      </div>
+    </div>
+    
+    
+  <script>
+    let index = 0;
+    const images = document.querySelectorAll('.carousel-image');
+
+    function changeImage() {
+        // Hide the current active image
+        images[index].classList.remove('active');
+
+        // Increment index and loop back to the start if necessary
+        index++;
+        if (index >= images.length) {
+            index = 0;
+        }
+
+        // Show the next image
+        images[index].classList.add('active');
+    }
+
+    // Set the interval for image change every 6 seconds
+    setInterval(changeImage, 5000); // Change image every 3 seconds (adjust timing as needed)
+  </script>
+
+  <br>
+
+  <p class="description">At Sky Mountain, we redefine modern living with a perfect blend of luxury and comfort. <br>Our carefully curated properties offer breathtaking views, state-of-the-art amenities, and a lifestyle designed to suit your needs. Whether you're looking for a cozy apartment, a spacious family home, or a prime commercial space, we have the perfect place for you.</p>
+
+  <div class="slider-container">
+    <h2 class="slider-title">Properties</h2>
+    
+    <div class="slider-wrapper">
+        <div id="sliderContent" class="slider-content">
+            <!-- Content will be dynamically generated by JavaScript -->
+        </div>
+        
+        <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+        <button class="slider-btn next" id="nextBtn">&#10095;</button>
+    </div>
+    
+    <div class="slider-dots" id="sliderDots">
+        <!-- Dots will be dynamically generated by JavaScript -->
+    </div>
+  </div>
+
+
+  <script src="js/homepage.js"></script>
+
+  <br>
+
+  <div class="banner-container">
+    <div class="banner-content">
+      <h2 class="banner-tagline">Sky Mountain's most Extensive Real Estate Portfolio</h2>
+      <h1 class="banner-headline">List your Property with Us</h1>
+      <a href="#" class="banner-button">List Now</a>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="image-gallery">
+    <h2 class="image-gallery-title">New Developments</h2>
+
+    <div class="image-wrapper">
+      <div id="image-content" class="image-content">
+        <a href="">
+          <div class="image-card">
+            <img src="images/New Developments/luna1.jpg" alt="447 Luna Tower">
+            <div class="image-text">
+              447 Luna Tower
+              <p>Colombo 2</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="image-card">
+            <img src="images/New Developments/cinnamon1.jpg" alt="Cinnamon life">
+            <div class="image-text">
+                Cinnamon Life
+                <p>Colombo 2</p>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="image-card">
+            <img src="images/New Developments/trizen1.jpg" alt="Trizen">
+            <div class="image-text">
+                Tri-zen
+                <p>Colombo 2</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="image-card">
+            <img src="images/New Developments/prime1.jpg" alt="Prime Grand">
+            <div class="image-text">
+                Prime Grand
+                <p>Colombo 7</p>
+            </div>
+          </div>
+        </a>
+      </div>  
+    </div>
+  </div>
+
+  <!--testimonial slider-->
+  <h2 class="testimonial-title">Testimonials</h2>
+
+  <div class="testimonial-slider">
+    <div class="testimonial-wrapper">
+      <div class="testimonial-slide">
+        <p>Sky Mountain has made property management effortless. The platform’s user-friendly interface and reliable features have helped me connect with buyers and tenants efficiently.</p>
+        <span class="name">- Kavindu Perera</span>
+        <span class="designation">Real Estate Agent</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>I used to struggle with managing multiple rental properties, but Sky Mountain has completely changed the game. The automated features save me time and effort.</p>
+        <span class="name">- Nethumi Jayasinghe</span>
+        <span class="designation">Property Owner</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>This platform is a must-have for anyone in real estate. The listing and communication tools make it easier to manage properties and track progress.</p>
+        <span class="name">- Dilshan Fernando</span>
+        <span class="designation">Construction Project Manager</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>Finding my dream home was never this easy! SkyMountain offers a smooth browsing experience with all the essential details at my fingertips.</p>
+        <span class="name">- Tharushi Ranasinghe</span>
+        <span class="designation">Homebuyer</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>Sky Mountain provides real-time market insights and investment opportunities that have helped me expand my property portfolio with confidence.</p>
+        <span class="name">- Sanjeewa Rathnayake</span>
+        <span class="designation">Property Investor</span>
+      </div>
+    </div>
+    <div class="slider-dots"></div>
+  </div>
+
+  <!--Footer-->
+
+  <br><br>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1: Company -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">List your property</a></li>
+            </ul>
+        </div>
+        
+        <!-- Column 2: Contact us -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:+941123892830">011 238 9283</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@skymountain.com">info@skymountain.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> 23, De Mel Road, Colombo, Sri Lanka</li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM, Sat: 10AM-4PM</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Logo -->
+        <div class="footer-column">
+            <div class="footer-logo"><img src="images/sky-mountain-high-resolution-logo-transparent (1).png" alt="SkyMountain logo" width="auto" height="40px"></div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-divider"></div>
+    
+    <div class="footer-bottom">
+        <div class="copyright">
+            &copy; Sky Mountain Private Limited. All Rights Reserved.
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* Property Listing Section */
+.property-listing {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin:30px;
+}
+
+/* Left Side Property Details */
+.property-details {
+    flex: 2;
+    line-height: 2;
+}
+
+.tag {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.location {
+    color: #666;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.usd-price {
+    font-size: 14px;
+    color: gray;
+}
+
+.property-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Enquiry Box */
+.enquiry-box {
+    flex: 1;
+    background: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    height: auto; 
+    align-self: flex-start; 
+    max-width: 500px;
+}
+
+.enquiry-box h3 {
+    font-size: 18px;
+}
+
+.enquiry-box p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.enquiry-box button {
+    transition: transform 0.3s ease-in-out;
+}
+
+.enquiry-box button:hover {
+    transform:scale(1.01);
+}
+
+.enquiry {
+    background: rgb(47, 61, 132);
+    color: white;
+}
+
+.viewing {
+    background: white;
+    border: 1px solid black;
+}
+
+/* About Property */
+.about-property {
+    margin:30px;
+    background-color: #66666632;
+    padding: 20px;
+}
+.about-property h2{
+    margin-bottom: 20px;
+}
+
+.about-property p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.features h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Styling for the carousel */
+.carousel {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Container for carousel images */
+  .carousel-images {
+    position: relative;
+    width: 100%; /* 8 images, 100% for each */
+    height: 450px;
+    transition: transform 1s ease-in-out;
+  }
+
+
+/* Styling for individual carousel items (image and text) */
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  /* Active image that should be visible */
+.carousel-item:has(.carousel-image.active) {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  /* Styling for individual images */
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* To make sure the image covers the space */
+  }
+
+  /* Styling for text on the left side */
+  .carousel-text {
+    position: absolute;
+    top:90%;
+    left: 5%; /* Adjust as needed */
+    transform: translateY(-50%); /* Center text vertically */
+    color: white; /* Text color */
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds shadow for better readability */
+    z-index: 2; /* Ensures the text appears above the image */
+    text-align: center;
+    font-size: 30px;
+    font-family: "Merriweather", serif;
+    text-shadow:  
+    -2px -2px 0 black,  
+     2px -2px 0 black,  
+    -2px  2px 0 black,  
+     2px  2px 0 black; /* Creates a black border effect */
+}
+  
+/* Active image that should be visible */
+.carousel-image.active {
+    display: block;
+}

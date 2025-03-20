@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SkyMountain</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/listings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nanum+Myeongjo&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rouge+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/sky-mountain-high-resolution-logo-transparent (1).png" alt="SkyMountain logo" width="auto" height="40px"></a>
+        </div>
+
+        <div class="navigation">
+            <ul type="none">
+                <a href="index.html"><li>Home</li></a>
+                <a href=""><li>Why Sky Mountain?</li></a>
+                <a href="commonProperties.html"><li>Listed Properties</li></a>
+                <a href=""><li>List your property</li></a>
+                <a href="contact.html"><li>Contact us</li></a>
+            </ul>
+        </div>
+
+        <div class="profile">
+            <i class="fa-solid fa-user fa-2x"></i>
+        </div>
+    </div>
+
+    <div class="imageCommon">
+        <img src="images/commonProperties/6.1.jpeg" alt="House">
+    </div>
+
+    <br>
+    
+    <div class="container">
+        <h1>Houses</h1>
+        <!-- Property cards will be generated here -->
+        <div id="property-listings"></div>
+    </div>
+    
+    <script src="js/houses.js"></script>
+    <script src="js/house-listings.js"></script>
+
+    <!--Footer-->
+
+    <br><br>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Company -->
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">List your property</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 2: Contact us -->
+            <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-phone"></i> <a href="tel:+941123892830">011 238 9283</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:info@skymountain.com">info@skymountain.com</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> 23, De Mel Road, Colombo, Sri Lanka</li>
+                <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM, Sat: 10AM-4PM</li>
+            </ul>
+            </div>
+
+            <!-- Column 4: Logo -->
+            <div class="footer-column">
+                <div class="footer-logo"><img src="images/sky-mountain-high-resolution-logo-transparent (1).png" alt="SkyMountain logo" width="auto" height="40px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; SkyMountain Private Limited. All Rights Reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy & Cookies</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
